@@ -1,6 +1,7 @@
 import {types} from "../types/types";
 import {firebase, googleAthProvider} from "../firebase/firebase-config";
 import {finishLoading, startLoading} from "./ui";
+import Swal from 'sweetalert2';
 
 export const startLoginUser = (email, password) => {
     return (dispatch) => {
@@ -14,6 +15,7 @@ export const startLoginUser = (email, password) => {
             }).catch( e => {
             console.log(e);
             dispatch(finishLoading());
+            Swal.fire('Error', 'The user does not exist. Please check your credentials', 'error' );
         });
     }
 }
@@ -31,6 +33,7 @@ export const startRegisterUser = (email, password, name) => {
             }).catch( e => {
             console.log(e);
             dispatch(finishLoading());
+            Swal.fire('Error', 'The user already exists', 'error' );
         });
     }
 }

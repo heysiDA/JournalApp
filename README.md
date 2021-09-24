@@ -1,3 +1,10 @@
+#Journal App
+It is a project to continue learning about React.
+-Authentication with Firebase is implemented
+-Redux is implemented
+-Routes protection
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

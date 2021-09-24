@@ -1,7 +1,7 @@
 # Journal App
-It is a project to continue learning about React.
--Authentication with Firebase is implemented
--Redux is implemented
+It is a project to continue learning about React.\
+-Authentication with Firebase is implemented\
+-Redux is implemented\
 -Routes protection
 
 

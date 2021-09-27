@@ -12,7 +12,8 @@ const JournalEntry = ({id, date, body, title, url}) => {
         dispatch(activeNote(id, {
             title,
             body,
-            date
+            date,
+            url
         }));
     }
 

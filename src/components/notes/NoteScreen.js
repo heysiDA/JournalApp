@@ -46,7 +46,7 @@ const NoteScreen = () => {
                 {
                     (!!note.url) &&
                     <div className="notes__image">
-                        <img src="" alt="logo"/>
+                        <img src={note.url} alt="logo"/>
                     </div>
                 }
             </div>

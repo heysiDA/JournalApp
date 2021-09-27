@@ -12,8 +12,7 @@ export const startLoginUser = (email, password) => {
                 dispatch(
                     login(user.uid, user.displayName)
                 )
-            }).catch( e => {
-            console.log(e);
+            }).catch( () => {
             dispatch(finishLoading());
             Swal.fire('Error', 'The user does not exist. Please check your credentials', 'error' );
         });
@@ -30,8 +29,7 @@ export const startRegisterUser = (email, password, name) => {
                 dispatch(
                     login(user.uid, user.displayName)
                 )
-            }).catch( e => {
-            console.log(e);
+            }).catch( () => {
             dispatch(finishLoading());
             Swal.fire(
                 'Error',

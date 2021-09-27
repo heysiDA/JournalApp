@@ -24,7 +24,6 @@ export const activeNote = (id, note) => ({
   }
 });
 
-
 export const startLoadingNotes = (uid) => {
   return async (dispatch) => {
       const notes = await loadNotes(uid);
@@ -37,3 +36,19 @@ export const setNotes = (notes) => ({
   type: types.noteLoad,
   payload: notes
 })
+
+
+export const startSaveNote = (note) => {
+    return async (dispatch, getState) => {
+        const {uid} = getState().auth;
+        console.log(uid)
+        if(!note.url){
+            delete note.url;
+        }
+        const noteToSave = {...note}
+        const idNote = noteToSave.id;
+        delete noteToSave.id;
+
+        await db.collection(`${uid}/journal/notes`).doc(idNote).update(noteToSave);
+    }
+}

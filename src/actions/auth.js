@@ -33,7 +33,11 @@ export const startRegisterUser = (email, password, name) => {
             }).catch( e => {
             console.log(e);
             dispatch(finishLoading());
-            Swal.fire('Error', 'The user already exists', 'error' );
+            Swal.fire(
+                'Error',
+                'The user already exists',
+                'error'
+            );
         });
     }
 }

@@ -45,7 +45,7 @@
 }
 
 .auth__alert-error{
-  background-color: rgba(218, 35, 35, 0.84);
+  background-color: $red-color;
   border-radius: 5px;
   color: #ffffff;
   display: flex;

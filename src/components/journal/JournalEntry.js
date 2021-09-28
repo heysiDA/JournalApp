@@ -21,21 +21,23 @@ const JournalEntry = ({id, date, body, title, url}) => {
         <div className={'journal__entry pointer'}
              onClick={handleNoteClick}
         >
-            {
-                !!url &&
-                <div className={'journal__entry-picture'}
-                  style={{
-                      backgroundSize: 'cover',
-                      backgroundImage: `url(${url})`
-                  }}/>
-            }
-            <div className={'journal__entry-body'}>
-                <p className={'journal__entry-title'}>
-                    {title}
-                </p>
-                <p className={'journal__entry-content'}>
-                    {body}
-                </p>
+            <div className={'journal__entry-section'}>
+                {
+                    !!url &&
+                    <div className={'journal__entry-picture'}
+                      style={{
+                          backgroundSize: 'cover',
+                          backgroundImage: `url(${url})`
+                      }}/>
+                }
+                <div className={'journal__entry-body'}>
+                    <p className={'journal__entry-title'}>
+                        {title}
+                    </p>
+                    <p className={'journal__entry-content'}>
+                        {body}
+                    </p>
+                </div>
             </div>
             <div className={'journal__date-box'}>
                 <span>{noteDate.format('dddd')}</span>

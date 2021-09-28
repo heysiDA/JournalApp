@@ -47,10 +47,14 @@
   border-radius: 4px;
   color: $dark-grey;
   display: flex;
+  justify-content: space-between;
   margin-bottom: 10px;
   overflow: hidden;
 }
 
+.journal__entry-section{
+  display: flex;
+}
 .journal__entry-picture{
   height: 70px;
   width: 70px;

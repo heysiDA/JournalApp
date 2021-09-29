@@ -1,4 +1,4 @@
-# Journal App
+# Journal React App
 It is a project to continue learning about React.\
 -Authentication with Firebase is implemented\
 -Redux\
